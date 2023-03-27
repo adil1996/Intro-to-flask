@@ -83,3 +83,7 @@ def load_path_variable(todo: str):
             return render_template('todo.html', completed=completed, text=text, title=title)
     else:
         return render_template("not-found.html", title="Not found", text=todo)
+
+@app.route('/FizzBuzz')
+def laod_fizz_buzz():
+    return render_template('FizzBuzz.html')
