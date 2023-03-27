@@ -1,0 +1,18 @@
+{% extends "basetemplate.html" %}
+{% from "macros.jinja2" import todo_li %}
+{% block content %}
+    {% set num_todos = todos | length %}
+            {% set todos_str = todos | join("&") %}
+
+            {% if num_todos > 0 %}
+                <p>You have {{num_todos}} left to do today.</p>
+                <ul>
+                    {% for text, completed in todos %}
+                        {{ todo_li(text, completed) }}
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>You have nothing to do today.</p>    
+            
+            {% endif %}
+{% endblock %}

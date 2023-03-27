@@ -1,0 +1,9 @@
+{% extends 'basetemplate.html' %}
+{% block content %}
+    <h1>{{text}}</h1>
+    {% if completed %}
+        <p class="todo todo--completed">You'have completed this todo! 🧨</p>
+    {% else %}
+        <p class="todo todo--pending">You haven't completed this yet. Why not do it now?</p>
+    {% endif %}
+{% endblock %}

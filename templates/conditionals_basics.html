@@ -1,0 +1,26 @@
+{% extends "basetemplate.html" %}
+
+{% block content %}
+  <h1>Conditionals in Jinja2</h1>
+    <h2>Basic comparisons</h2>
+
+    {% if company == "Apple" %}
+    <h3>Available Apple products</h3>
+    <ul>
+      <li>iPhone</li>
+      <li>iPad</li>
+      <li>iMac</li>
+    </ul>
+
+    {% elif company == "Microsoft" %}
+    <h3>Available Microsoft products</h3>
+    <ul>
+      <li>Windows</li>
+      <li>Azure</li>
+      <li>Kubernatee</li>
+    </ul>
+
+    {% else %}
+    <p>No {{ company }} products available.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "basetemplate.html" %}
+
+{% block content %}
+  <h2>Data Structures in Jinja2</h2>
+
+  <h3>List Operations</h3>
+
+  <p>
+      Jina said her top three favorite movies were {{ movies[0] }},
+      {{ movies[1] }} and  {{ movies[2] }}.
+  </p>
+
+  <h3>Dictionary Operations</h3>
+
+  <p>
+      This is a {{ car["brand"] }} {{ car["model"] }}, built
+      in {{ car["year"] }}.
+  </p>
+
+  <h3>Custom Data Structure Operations</h3>
+
+  <p>
+    The four Galilean moons of Jupiter are {{ moons.first }},
+    {{ moons.second }}, {{ moons.third }} and {{ moons.fourth }}.
+</p>
+{% endblock %}
